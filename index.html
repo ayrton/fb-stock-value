@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>  
+  <head>  
+    <meta charset='utf-8' />  
+    <title>Facebook Stock Value</title>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- This makes IE recognize and use the HTML5 elements -->
+    <link type="text/css" rel="stylesheet" href="assets/stylesheets/main.css">
+    <script type="text/javascript" src="assets/javascript/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/main.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Create and populate the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['x', 'Facebook'],
+          ['A',   1],
+          ['B',   2],
+          ['C',   3],
+          ['D',   4],
+          ['E',   2],
+          ['F',   8],
+          ['G',   9],
+          ['H',   3],
+          ['I',   20],
+          ['J',   3],
+          ['K',   0.5],
+          ['L',   1],
+          ['M',   0.5],
+          ['N',   1]
+        ]);
+      
+        // Create and draw the visualization.
+        new google.visualization.LineChart(document.getElementById('graph')).
+        draw(data, {
+          curveType: "function",
+          width: 700,
+          height: 200,
+          backgroundColor: "#3b5998",
+          pointSize: 9,
+          axisTitlesPosition: 'none',
+
+          legend: {
+            position: 'none'
+          },
+
+          chartArea: {
+            width: '700',
+          },
+
+          animation: {
+            duration: 1,
+            easing: 'inAndOut',
+          },
+
+          vAxis: {
+            gridlines: {
+              color: "#3b5998",
+            },
+            textPosition: 'in',
+            baselineColor: 'red'
+          },
+
+          hAxis: {
+            textPosition: 'in',
+          }
+        });
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Facebook Stock Value</h1>
+        <div id="current">
+          $<span>$$.$$</span>
+        </div>
+      </header>
+      
+      <div id="graph">
+
+      </div>
+
+      <footer>
+        <p>Made by <strong><a href="http://madeawkward.com">Awkward</a></strong></p>
+        <p>Stock information by <a href="http://www.google.com/finance?q=NASDAQ:FB">Google</a></p>
+        <p><em><strong>Awkward</strong> is not repsonsible for the information shown on this page.</em></p>
+      </footer>
+    </div>
+  </body>
+</html>
