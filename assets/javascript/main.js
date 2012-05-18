@@ -14,7 +14,7 @@
       return $.ajax({
         url: "http://www.google.com/finance/info?client=ig&q=FB",
         success: function(data) {
-          displayQuote(eval(data));
+          displayQuote(data);
           return $('#current').addClass('show');
         },
         error: function() {
