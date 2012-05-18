@@ -37,7 +37,7 @@ a {
 }
 
 header {
-	margin-bottom: 150px;
+	margin-bottom: 125px;
 
 	h1 {
 		width: 334px;
@@ -63,12 +63,20 @@ header {
 }
 
 #graph {
-    height: 240px;
-    left: 0;
-    top: 0;
-    width: 700px;
-    color: #fff !important;
-    margin-bottom: 100px;
+  left: 0;
+  top: 0;
+
+  h2 {
+  	font: {
+  		size: 13px;
+  	}
+  }
+  
+  #chart {
+  	width: 700px;
+  	margin-bottom: 100px;
+  	margin-left: -20px
+  }
 }
 
 footer {
