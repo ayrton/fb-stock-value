@@ -3,3 +3,10 @@
 	-moz-opacity: 		$opacity;
 	opacity: 		$opacity;
 }
+
+@mixin transition ($kind: all, $speed: 0.1s) {
+  -webkit-transition: $kind $speed ease-in-out;
+  -moz-transition: $kind $speed ease-in-out; 
+  -ms-transition: $kind $speed ease-in-out; 
+  -o-transition: $kind $speed ease-in-out; 
+}

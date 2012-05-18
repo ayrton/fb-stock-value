@@ -11,8 +11,12 @@ jQuery ($) ->
       success: (data) ->
         displayQuote eval(data)
 
+        $('#current').addClass('show')
+
       error: ->
         console.log "Retrieving data didn't work"
+
+        $('#current').addClass('error')
 
       dataType: "jsonp"
 

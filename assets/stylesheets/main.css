@@ -40,7 +40,22 @@ header {
     font-weight: bold;
     float: right;
     margin-top: 6px;
-    color: rgba(255, 255, 255, 0.4); }
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+    header #current.show {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      opacity: 1; }
+    header #current.error {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      opacity: 1; }
     header #current span {
       margin-left: 5px;
       color: #fff; }

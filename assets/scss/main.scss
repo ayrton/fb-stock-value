@@ -3,6 +3,8 @@
 * {
 	margin: 0;
 	padding: 0;
+
+	// @include transition;
 }
 
 html,
@@ -52,8 +54,17 @@ header {
 		font-weight: bold;
 		float: right;
 		margin-top: 6px;
-
 		color: rgba(255, 255, 255, 0.4);
+		@include opacity(0);
+		@include transition(all, 0.2s);
+
+		&.show {
+			@include opacity(1);
+		}
+
+		&.error {
+			@include opacity(1);
+		}
 
 		span {
 			margin-left: 5px;
