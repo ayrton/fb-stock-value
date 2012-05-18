@@ -9,7 +9,7 @@ jQuery ($) ->
     $.ajax
       url: "http://www.google.com/finance/info?client=ig&q=FB"
       success: (data) ->
-        displayQuote eval(data)
+        displayQuote data
 
         $('#current').addClass('show')
 
