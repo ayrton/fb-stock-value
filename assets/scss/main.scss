@@ -15,7 +15,7 @@ body {
 	font-size: 13px;
 	color: #fff;
 	line-height: 20px;
-	text-shadow: 0 1px 1px rgba(16, 31, 61, 0.25);
+	text-shadow: 0 0 1px rgba(16, 31, 61, 0.25);
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -80,17 +80,24 @@ header {
 }
 
 footer {
-	text-align: center;
 	padding-bottom: 70px;
+	color: rgba(255, 255, 255, 0.4);
 
-	p:nth-child(2),
-	p:nth-child(3) {
-		color: rgba(255, 255, 255, 0.4);
+	// p:nth-child(2),
+	// p:nth-child(3) {
+	// 	color: rgba(255, 255, 255, 0.4);
+	// }
 
- 	}
+	.awwwwkwardddd {
+		float: left;
+	}
+
+	.copy {
+		text-align: right;
+		float: right;
+	}
 
 	em {
-		padding-top: 20px;
-		display: inline-block;
+
 	}
 }
