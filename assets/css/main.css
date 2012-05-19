@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  background: #3b5998 no-repeat center 0; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 13px;
+  color: #fff;
+  line-height: 20px;
+  text-shadow: 0 0 1px rgba(16, 31, 61, 0.25);
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+#wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
+  padding: 170px 0 0 0; }
+
+header {
+  margin-bottom: 125px; }
+  header h1 {
+    width: 334px;
+    height: 32px;
+    background: url("../images/h1.png");
+    text-indent: -9999px;
+    float: left; }
+  header #current {
+    font-size: 35px;
+    font-weight: bold;
+    float: right;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+    header #current.show {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      opacity: 1; }
+    header #current.error {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      opacity: 1; }
+    header #current span {
+      margin-left: 5px;
+      color: #fff; }
+
+#graph {
+  left: 0;
+  top: 0; }
+  #graph h2 {
+    font-size: 13px; }
+  #graph #chart {
+    width: 700px;
+    margin-bottom: 100px;
+    margin-left: -20px; }
+
+footer {
+  padding-bottom: 70px;
+  color: rgba(255, 255, 255, 0.4); }
+  footer .awwwwkwardddd {
+    float: left; }
+  footer .copy {
+    text-align: right;
+    float: right; }

@@ -10,12 +10,10 @@ jQuery ($) ->
       url: "http://www.google.com/finance/info?client=ig&q=FB"
       success: (data) ->
         displayQuote data
-
         $('#current').addClass('show')
 
       error: ->
         console.log "Retrieving data didn't work"
-
         $('#current').addClass('error')
 
       dataType: "jsonp"
