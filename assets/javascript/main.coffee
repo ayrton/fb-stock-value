@@ -42,15 +42,20 @@ allDataLoaded = ->
   drawVisualization() if yahooIsLoaded and googleIsLoaded
 
 parseData = (data) ->
-  console.log "parse graph data"
-  console.log data.query.results
-  # insert Friday 18th as first with value 38.00
-  # parsedGraphData = ["dag", "waarde"] for each entry
+  myResults = data.query.results.quote
+  console.log myResults
+  parsedGraphData.push [ "x", "Stock value" ]
+  parsedGraphData.push ["2012-05-18 Start", parseFloat("38.00")]
+  myResults = myResults.reverse() if myResults.length > 1
+  parsedGraphData.push ["2012-05-18", parseFloat(myResults.Close)]
+  #_.each myResults, (quote) ->
+  #  myfloat = parseFloat(quote.Close)
+  #  parsedGraphData.push [quote.date, myfloat]
+
 
 getChartData = ->
   limitResults = "30"
-  quoteSymbol = "AAPL"
-  #"FB"
+  quoteSymbol = "FB"
   now = new Date()
   month = now.getMonth() + 1
   if month.length = 1
@@ -69,8 +74,7 @@ getChartData = ->
 
 
 drawVisualization = ->
-  # get parsedGraphData and insert in graph
-  data = google.visualization.arrayToDataTable([ [ "x", "Facebook" ], [ "A", 1 ], [ "B", 2 ], [ "C", 3 ] ])
+  data = google.visualization.arrayToDataTable(parsedGraphData)
   new google.visualization.LineChart(document.getElementById("chart")).draw data,
     curveType: "function"
     width: 740
