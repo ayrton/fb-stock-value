@@ -11,73 +11,8 @@
     <!-- This makes IE recognize and use the HTML5 elements -->
     <link type="text/css" rel="stylesheet" href="assets/stylesheets/main.css">
     <script type="text/javascript" src="assets/javascript/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/main.js"></script>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['corechart']});
-    </script>
-    <script type="text/javascript">
-      function drawVisualization() {
-        // Create and populate the data table.
-        var data = google.visualization.arrayToDataTable([
-          ['x', 'Facebook'],
-          ['A',   1],
-          ['B',   2],
-          ['C',   3],
-          ['D',   4],
-          ['E',   2],
-          ['F',   8],
-          ['G',   9],
-          ['H',   3],
-          ['I',   20],
-          ['J',   3],
-          ['K',   0.5],
-          ['L',   1],
-          ['M',   0.5],
-          ['N',   40]
-        ]);
-      
-        // Create and draw the visualization.
-        new google.visualization.LineChart(document.getElementById('chart')).
-        draw(data, {
-          curveType: "function",
-          width: 740,
-          height: 200,
-          backgroundColor: "#3b5998",
-          pointSize: 9,
-          axisTitlesPosition: 'none',
-          lineWidth: 3,
-          colors: ['#7385b0'],
-
-          legend: {
-            position: 'none'
-          },
-
-          chartArea: {
-            width: '740',
-          },
-
-          animation: {
-            duration: 1,
-            easing: 'inAndOut',
-          },
-
-          vAxis: {
-            gridlines: {
-              color: "#3b5998",
-            },
-            textPosition: 'none',
-            baselineColor: 'none'
-          },
-
-          hAxis: {
-            textPosition: 'none',
-          }
-        });
-      }
-      
-      google.setOnLoadCallback(drawVisualization);
-    </script>
+    <script type="text/javascript" src="assets/javascript/main.js"></script>
   </head>
 
   <body>
@@ -99,8 +34,8 @@
 
       <footer>
         <div class="awwwwkwardddd">
-          <p>Made<br />
-          <strong><a href="http://madeawkward.com">Awkward</a></strong></p>
+          <p>This is an<br />
+          <strong><a href="http://madeawkward.com">Awkward</a></strong> sideproject.</p>
         </div>
         
         <div class="copy">
