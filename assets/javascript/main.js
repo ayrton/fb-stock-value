@@ -8,7 +8,7 @@
       change = data[0].c;
       changepercent = data[0].cp;
       current = data[0].l;
-      return $("#current span").html(current);
+      return $("#current div.value span").html(current);
     };
     getQuote = function() {
       return $.ajax({
