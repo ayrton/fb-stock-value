@@ -67,14 +67,17 @@ header {
       margin-left: 25px;
       float: left;
       line-height: 16px;
-      background: url("../images/arrows.png") no-repeat 0 -3px;
+      background: url("../images/arrows.png") no-repeat 0 -12px;
       color: #fff;
       font-size: 13px; }
+      header #current .change em {
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.4); }
       header #current .change span {
         display: block;
         padding-left: 30px; }
       header #current .change.down {
-        background-position: 0 -44px; }
+        background-position: 0 -51px; }
 
 #graph {
   left: 0;
