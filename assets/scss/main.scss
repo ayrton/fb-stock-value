@@ -66,9 +66,46 @@ header {
 			@include opacity(1);
 		}
 
-		span {
-			margin-left: 5px;
+		.value {
+			float: left;
+
+			span {
+				margin-left: 5px;
+				color: #fff;
+			}
+		}
+
+		.change {
+			position: relative;
+			top: -6px;
+			margin-left: 25px;
+			float: left;
+			line-height: 16px;
+			background: url("../images/arrows.png") no-repeat 0 -12px;
 			color: #fff;
+			min-width: 70px;
+
+			font: {
+				size: 13px;
+			}
+
+			em {
+				font-style: normal;
+				color: rgba(255, 255, 255, 0.4);
+			}
+
+			span {
+				display: block;
+				padding-left: 30px;
+			}
+
+			&.up {
+
+			}
+
+			&.down {
+				background-position: 0 -51px;
+			}
 		}
 	}
 }

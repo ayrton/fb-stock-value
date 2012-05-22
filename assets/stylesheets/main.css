@@ -56,9 +56,29 @@ header {
       -webkit-opacity: 1;
       -moz-opacity: 1;
       opacity: 1; }
-    header #current span {
-      margin-left: 5px;
-      color: #fff; }
+    header #current .value {
+      float: left; }
+      header #current .value span {
+        margin-left: 5px;
+        color: #fff; }
+    header #current .change {
+      position: relative;
+      top: -6px;
+      margin-left: 25px;
+      float: left;
+      line-height: 16px;
+      background: url("../images/arrows.png") no-repeat 0 -12px;
+      color: #fff;
+      min-width: 70px;
+      font-size: 13px; }
+      header #current .change em {
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.4); }
+      header #current .change span {
+        display: block;
+        padding-left: 30px; }
+      header #current .change.down {
+        background-position: 0 -51px; }
 
 #graph {
   left: 0;

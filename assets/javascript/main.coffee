@@ -1,9 +1,19 @@
 jQuery ($) ->
   displayQuote = (data) ->
+    console.log data
     change = data[0].c
-    changepercent = data[0].cp
+    changePercent = data[0].cp
     current = data[0].l
-    $("#current span").html current
+    $("#current div.value span").html current
+    if change.indexOf("+") >= 0
+      $(".change").addClass("up")
+      $(".change").removeClass("down")
+    else
+      $(".change").addClass("down")
+      $(".change").removeClass("up")
+    
+    $("#changeStock").html change
+    $("#changePercent").html changePercent + "%"
 
   getQuote = ->
     $.ajax
@@ -43,7 +53,6 @@ allDataLoaded = ->
 
 parseData = (data) ->
   myResults = data.query.results.quote
-  console.log myResults
   parsedGraphData.push [ "x", "Stock value" ]
   parsedGraphData.push ["2012-05-18 Start", parseFloat("38.00")]
   myResults = myResults.reverse() if myResults.length > 1
