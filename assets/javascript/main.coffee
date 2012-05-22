@@ -47,10 +47,9 @@ parseData = (data) ->
   parsedGraphData.push [ "x", "Stock value" ]
   parsedGraphData.push ["2012-05-18 Start", parseFloat("38.00")]
   myResults = myResults.reverse() if myResults.length > 1
-  parsedGraphData.push ["2012-05-18", parseFloat(myResults.Close)]
-  #_.each myResults, (quote) ->
-  #  myfloat = parseFloat(quote.Close)
-  #  parsedGraphData.push [quote.date, myfloat]
+  _.each myResults, (quote) ->
+    myfloat = parseFloat(quote.Close)
+    parsedGraphData.push [quote.date, myfloat]
 
 
 getChartData = ->
