@@ -81,7 +81,7 @@ header {
 			margin-left: 25px;
 			float: left;
 			line-height: 16px;
-			background: url("../images/arrows.png") no-repeat 0 -12px;
+			
 			color: #fff;
 			min-width: 70px;
 
@@ -100,11 +100,11 @@ header {
 			}
 
 			&.up {
-
+				background: url("../images/arrows.png") no-repeat 0 -12px;
 			}
 
 			&.down {
-				background-position: 0 -51px;
+				background: url("../images/arrows.png") no-repeat 0 -51px;
 			}
 		}
 	}
