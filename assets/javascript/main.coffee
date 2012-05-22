@@ -1,6 +1,5 @@
 jQuery ($) ->
   displayQuote = (data) ->
-    console.log data
     change = data[0].c
     changePercent = data[0].cp
     current = data[0].l
@@ -9,9 +8,14 @@ jQuery ($) ->
       $(".change").addClass("up")
       $(".change").removeClass("down")
     else
-      $(".change").addClass("down")
-      $(".change").removeClass("up")
+      if change is "0.00"
+        $(".change").removeClass("down")
+        $(".change").removeClass("up")
+      else
+        $(".change").addClass("down")
+        $(".change").removeClass("up")
     
+
     $("#changeStock").html change
     $("#changePercent").html changePercent + "%"
 
