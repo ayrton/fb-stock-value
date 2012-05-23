@@ -15,7 +15,7 @@ jQuery ($) ->
       else
         $(".change").addClass("down")
         $(".change").removeClass("up")
-    
+
 
     $("#changeStock").html change
     $("#changePercent").html changePercent + "%"
@@ -33,7 +33,7 @@ jQuery ($) ->
 
       dataType: "jsonp"
 
-  
+
 
   getQuote()
   setInterval getQuote, 5000
